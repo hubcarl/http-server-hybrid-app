@@ -4,7 +4,7 @@
 *?Created?by Sky on??2015/7/8
 *?Copyright?(c)?2015 Sky All?Rights?Reserved
 */
-package com.hybrid.app.smart.webview;
+package com.hybrid.app.smart.bridge;
 
 import android.webkit.JsPromptResult;
 import android.webkit.JsResult;
