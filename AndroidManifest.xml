@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.smart.app.framework"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="19"/>
+    <application
+            android:name=".SmartApp"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:icon="@drawable/ic_launcher">
+        <activity android:name="com.smart.app.example.MainActivity"
+                  android:screenOrientation="portrait"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <!--<a href="smart://hybrid.app/pull?name=carl&age=26">启动smart应用程序</a>  -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="smart" android:host="hybrid.app" android:pathPrefix="/pull"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.SmartCommonActivity"/>
+        <service
+                android:name=".service.SmartService"
+                android:exported="true"
+                android:label="核心服务" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+</manifest>

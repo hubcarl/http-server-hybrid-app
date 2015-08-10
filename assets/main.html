@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <style>
+        .panel {
+            text-align: center;
+            font-size: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border: 1px solid #cecece
+        }
+    </style>
+    <script src="js/SmartNativeJSBridge.js"></script>
+    <script src="js/SmartNativeAPI.js"></script>
+</head>
+<body style="background-color: white;margin-bottom: 100px">
+
+<div class="panel"
+     onclick="SmartNativeAPI.showDialog('温馨提示','showDialog测试showDialog测试showDialog测试','测试测试测试测试测试测试测试测试',[{name:'确定', script:'alert(111111)'},{name:'取消', script:'alert(2222)'}])">
+    showDialog测试
+</div>
+<p></p>
+
+<div class="panel"
+     onclick="SmartNativeAPI.showLoading('正在加载中...')">showLoading测试
+</div>
+<p></p>
+
+<div class="panel"
+     onclick="SmartNativeAPI.httpGet('http://www.codehelp.cn',{}, function(response){
+        alert(JSON.stringify(response));
+     })">http get 请求（alert显示大文本内容很慢）
+</div>
+<p></p>
+
+<div class="panel"
+     onclick="SmartNativeAPI.httpPost('http://codestudy.sinaapp.com/api/search.php',{text:'android',count:5},
+     function(response){
+        console.log('>>>loadJavaScript#H5#end:'+new Date().getTime());
+        var start = new Date().getTime();
+        var str = JSON.stringify(response);
+        console.log('>>>loadJavaScript#H5#stringify cost:'+ (new Date().getTime()-start)+'ms');
+        console.log('>>>loadJavaScript#H5#response:' + str);
+        alert('call success, please view logcat log!');
+     })">http post 请求
+</div>
+<p></p>
+
+<div class="panel"
+     onclick="alert(SmartNativeAPI.getEnv('https://www.baidu.com'))">getEnv同步调用
+</div>
+</body>
+</html>

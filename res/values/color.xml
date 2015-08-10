@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    <color name="transparent">#0000</color>
+    <color name="weibo_listtab_off">#8d8d8d</color>
+    <color name="red">#ffff0000</color>
+    <color name="blue">#ff3590c4</color>
+    <color name="white">#ffffffff</color>
+    <color name="green">#7700ff00</color>
+    <color name="yellow">#ffff7000</color>
+    <color name="blank">#00000000</color>
+    <color name="light_blank">#4F4F4F</color>
+    <color name="light_gray">#f6f6f6</color>
+
+    <color name="list_item_title">#454545</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#992416</color>
+    <color name="list_divider">#272727</color>
+
+    <color name="smart_yellow">#EE5C42</color>
+    <color name="smart_red">#FF4040</color>
+    <color name="smart_green">#43CD80</color>
+    <color name="smart_blue">#3cb3e9</color>
+
+    <color name="smart_tab_bg">#D5ffff</color>
+    <color name="smart_indicator_color">#43CD80</color>
+    <color name="smart_header_menu_black_normal">#222222</color>
+    <color name="smart_header_menu_black_hover">#000000</color>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="smart_tab_bg_height">40dip</dimen>
+    <dimen name="smart_indicator_default_width">90dip</dimen>
+
+</resources>
